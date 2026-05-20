@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Scipace Website
 
-## Getting Started
+Marketing landing page for [Scipace](https://scipace.com) — built with **React 19**, **Vite**, **TypeScript**, **Tailwind CSS 4**, and **shadcn/ui**.
 
-First, run the development server:
+## Getting started
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start Vite dev server with HMR |
+| `npm run build` | Type-check and build static site to `dist/` |
+| `npm run preview` | Preview the production build locally |
+| `npm run lint` | Run ESLint |
 
-## Learn More
+## Project structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+├── App.tsx                 # Page layout and sections
+├── main.tsx                # React entry point
+├── styles/index.css        # Global styles and design tokens
+├── lib/                    # Utilities (scroll, nav config)
+└── components/
+    ├── layout/             # Header, footer
+    ├── sections/           # Page sections (hero, mission, FAQ, …)
+    ├── shared/             # Reusable UI (logo, headings, scroll links)
+    └── ui/                 # shadcn/ui primitives
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Editing content
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Page composition:** [`src/App.tsx`](src/App.tsx)
+- **Section copy:** files in [`src/components/sections/`](src/components/sections/)
+- **Navigation targets:** [`src/lib/nav-sections.ts`](src/lib/nav-sections.ts)
+- **Colors and theme:** CSS variables in [`src/styles/index.css`](src/styles/index.css)
 
-## Deploy on Vercel
+## Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This is a **static site**. After `npm run build`, deploy the `dist/` folder to any static host:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Vercel (framework preset: Vite)
+- Netlify
+- Cloudflare Pages
+- GitHub Pages
+- AWS S3 + CloudFront
+
+Build command: `npm run build`  
+Publish directory: `dist`
+
+## Tech stack
+
+- [Vite](https://vite.dev/) — build tool and dev server
+- [React](https://react.dev/) — UI
+- [Tailwind CSS](https://tailwindcss.com/) — styling
+- [shadcn/ui](https://ui.shadcn.com/) — accessible components
+- [Lucide](https://lucide.dev/) — icons
