@@ -13,12 +13,12 @@ Open [http://localhost:5173](http://localhost:5173) in your browser.
 
 ## Scripts
 
-| Command | Description |
-|---------|-------------|
-| `npm run dev` | Start Vite dev server with HMR |
-| `npm run build` | Type-check and build static site to `dist/` |
-| `npm run preview` | Preview the production build locally |
-| `npm run lint` | Run ESLint |
+| Command           | Description                                 |
+| ----------------- | ------------------------------------------- |
+| `npm run dev`     | Start Vite dev server with HMR              |
+| `npm run build`   | Type-check and build static site to `dist/` |
+| `npm run preview` | Preview the production build locally        |
+| `npm run lint`    | Run ESLint                                  |
 
 ## Project structure
 
@@ -44,16 +44,19 @@ src/
 
 ## Deployment
 
-This is a **static site**. After `npm run build`, deploy the `dist/` folder to any static host:
+This is a **static site**. After `npm run build`, deploy the `dist/` folder.
 
-- Vercel (framework preset: Vite)
-- Netlify
-- Cloudflare Pages
-- GitHub Pages
-- AWS S3 + CloudFront
+**AWS S3 + CloudFront (step-by-step):** see [docs/DEPLOYMENT-AWS.md](docs/DEPLOYMENT-AWS.md)
 
-Build command: `npm run build`  
-Publish directory: `dist`
+Quick deploy after setup:
+
+```bash
+cp .env.deploy.example .env.deploy
+# Edit .env.deploy with your S3 bucket and CloudFront distribution ID
+npm run deploy:aws
+```
+
+Other hosts: Vercel, Netlify, Cloudflare Pages — build command `npm run build`, output `dist/`.
 
 ## Tech stack
 

@@ -58,7 +58,7 @@ export function SiteHeader() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Sign up
+              Join the Beta
             </a>
           </Button>
 
@@ -100,7 +100,7 @@ export function SiteHeader() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Sign up
+                    Join the Beta
                   </a>
                 </Button>
                 <Button

@@ -15,7 +15,7 @@ const faqs = [
   {
     question: "How do I register an organization?",
     answer:
-      "Use Sign up in the header to create an account and enter your organization name. You can start building in minutes.",
+      "Use Join the Beta in the header to create an account and enter your organization name. You can start building in minutes.",
   },
   {
     question: "How can we collaborate?",

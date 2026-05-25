@@ -13,7 +13,7 @@ export function HeroActions() {
         className="bg-scipace-heading text-white hover:bg-scipace-heading/90"
       >
         <a href={SIGN_UP_URL} target="_blank" rel="noopener noreferrer">
-          Sign up
+          Join the Beta
           <ArrowRight className="size-4" />
         </a>
       </Button>

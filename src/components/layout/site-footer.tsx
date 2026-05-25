@@ -51,7 +51,7 @@ export function SiteFooter() {
                   rel="noopener noreferrer"
                   className="transition-colors hover:text-white"
                 >
-                  Create account / Sign up
+                  Join the Beta
                 </a>
               </li>
               <li>
